@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій SoundCloud Аналог</title>
+    <!-- Сюди пізніше підключимо CSS файл -->
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    
+    <!--Top panel(Header)-->
+
+    <header class="header">
+        <div class="logo-wrapper">
+            <div class="logo"> SoundCloudClone</div>
+            <img  class="logo-img" src="/img/logo-v1.jpg" alt="">
+        </div>       
+        <nav class="nav-links">
+            <a href="#" class="active">Головна</a>
+            <a href="#">Бібліотека</a>
+        </nav>
+        <div class="search-bar">
+            <input class="search-bar-input" type="text"  placeholder="Пошук треків, артистів...">
+        </div>
+        <a href="#" class="user-profile">
+            <span class="profile-text">Мій Профіль</span>
+        </a>
+    </header>
+
+    <!--Main content-->
+
+<main class="main-content">
+    
+    <!-- ВЕЛИКИЙ БЛОК ПОТОЧНОГО ТРЕКУ (Згідно з твоєю схемою) -->
+    <section class="current-track-banner">
+        <!-- Зображення поточного треку -->
+        <img src="/img/img.jfif" alt="Поточний трек" class="banner-cover">
+        
+        <div class="banner-info">
+            <span class="banner-status"></span>
+            
+            <!-- Прогрес треку у вигляді хвилі -->
+            <div class="banner-waveform-container">
+                <div class="waveform-bars">
+                <!-- Створюємо багато ліній різної висоти (можна скопіювати більше) -->
+                <div class="bar" style="height: 40%;"></div>
+                <div class="bar" style="height: 60%;"></div>
+                <div class="bar" style="height: 85%;"></div>
+                <div class="bar" style="height: 50%;"></div>
+                <div class="bar" style="height: 70%;"></div>
+                <div class="bar" style="height: 95%;"></div>
+                <div class="bar" style="height: 45%;"></div>
+                <div class="bar" style="height: 30%;"></div>
+                <div class="bar" style="height: 65%;"></div>
+                <div class="bar" style="height: 80%;"></div>
+                <div class="bar" style="height: 55%;"></div>
+                <div class="bar" style="height: 90%;"></div>
+                <div class="bar" style="height: 40%;"></div>
+                <div class="bar" style="height: 75%;"></div>
+                <div class="bar" style="height: 85%;"></div>
+                <div class="bar" style="height: 50%;"></div>
+                <div class="bar" style="height: 60%;"></div>
+                <div class="bar" style="height: 30%;"></div>
+                <div class="bar" style="height: 70%;"></div>
+                <div class="bar" style="height: 85%;"></div>
+            </div>
+            </div>
+            
+            <!-- Нижня панель інструментів великої картки -->
+            <div class="banner-controls-row">
+                <div class="banner-actions">
+                    <button class="btn-banner-prev">⏮</button>
+                    <button class="btn-banner-play">▶</button>
+                    <button class="btn-banner-next">⏭</button>
+                    <span class="banner-titles"></span>
+                </div>
+                
+                <div class="banner-buttons">
+                    <button class="btn-like" title="Like">🤍</button>
+                    <button class="btn-library" title="addToLibrary">📁</button>
+                    <button class="btn-custom-playlist" title="addToCustom">🎧</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СПИСОК ІНШИХ ТРЕКІВ НАСТУПНІ -->
+    <h2 class="section-title">Наступні треки</h2>
+    <section class="tracks-list">
+        <article class="track-card"  data-track-index="0">
+                <img src="https://i.pinimg.com/1200x/7f/e7/d2/7fe7d2f30825da56a0cc6b5bf4bb32b4.jpg" alt="Обкладинка" class="track-cover">
+                
+                <!--Info track and waveform-->
+
+                <div class="track-info-block">
+                    <div class="track-header">
+                        <button class="btn-play-track">▶</button>
+                        <div class="track-titles">
+                            <span class="artist-name">The Weeknd</span>
+                            <h3 class="track-title">Starboy</h3>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="track-card"  data-track-index="1">
+                <img src="https://i.pinimg.com/736x/60/b8/d2/60b8d2607801c438d779ffe15967fecd.jpg" alt="Обкладинка" class="track-cover">
+                
+                <!--Info track and waveform-->
+
+                <div class="track-info-block">
+                    <div class="track-header">
+                        <button class="btn-play-track">▶</button>
+                        <div class="track-titles">
+                            <span class="artist-name">Eminem</span>
+                            <h3 class="track-title">Slimshady</h3>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="track-card"  data-track-index="2">
+                <img src="https://i.pinimg.com/736x/a0/32/e3/a032e35a3611e225ab8c365dcd9c89f7.jpg" alt="Обкладинка" class="track-cover">
+                
+                <!--Info track and waveform-->
+
+                <div class="track-info-block">
+                    <div class="track-header">
+                        <button class="btn-play-track">▶</button>
+                        <div class="track-titles">
+                            <span class="artist-name">Nirvana</span>
+                            <h3 class="track-title">Smells Like Teen Spiri</h3>
+                        </div>
+                    </div>                    
+                </div>
+            </article>
+    </section>
+    <div id="page-library" class="hidden">
+        <h2 class="section-title">Моя Бібліотека</h2>
+        
+        <div class="library-grid">
+            <!-- Блок 1: Вподобані треки -->
+            <div class="library-section">
+                <h3>❤️ Вподобані пісні </h3>
+                <div id="likes-list" class="library-tracks-container">
+                    <p class="empty-text">Тут з'являться ваші лайки</p>
+                </div>
+            </div>
+
+            <!-- Блок 2: Додані в бібліотеку -->
+            <div class="library-section">
+                <h3>📂 Додані в бібліотеку</h3>
+                <div id="library-list" class="library-tracks-container">
+                    <p class="empty-text">Тут з'являться додані треки</p>
+                </div>
+            </div>
+
+            <!-- Блок 3: Власні списки (Кастомний плейліст) -->
+            <div class="library-section">
+                <h3>🎧 Власний список відтворення</h3>
+                <div id="custom-list" class="library-tracks-container">
+                    <p class="empty-text">Порожньо. Додайте трек в Likes або Бібліотеку</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+    <!--Footer player-->
+
+    <footer class="bottom-player">
+
+        <!--Button controls-->
+
+        <div class="player-controls">
+            <button class="btn-prev">⏮</button>
+            <button class="btn-main-play">▶</button>
+            <button class="btn-next">⏭</button>
+        </div>
+
+        <!--time and bar progress-->
+
+        <div class="player-progress-container">
+            <span class="current-time">0:00</span>
+            <input type="range" class="player-progress" value="0" min="0" max="100">
+            <span class="total-time">3:45</span>
+        </div>
+
+        <!--mini info current track-->
+
+        <div class="current-track-details">
+            <img class="track-cover-mini" src="/img/img.jfif" alt="Міні обкладинка">
+            <div>
+                <h4>Назва пісні</h4>
+                <p>Артист</p>
+            </div>
+        </div>
+
+        <!--Volume control-->
+
+        <div class="volume-control">
+            <span>🔊</span>
+            <input type="range" class="volume-slider" value="70" min="0" max="100">
+        </div>
+    </footer>
+    <!-- МОДАЛЬНЕ ВІКНО АВТОРИЗАЦІЇ -->
+<div id="auth-modal" class="modal">
+    <div class="modal-content">
+        <!-- Кнопка закриття (хрестик) -->
+        <span class="close-modal">&times;</span>
+        
+        <!-- ФОРМА ВХОДУ (LOGIN) -->
+        <div id="login-form-container">
+            <h2>Вхід в акаунт</h2>
+            <form id="login-form">
+                <input type="text" id="login-username" placeholder="Ім'я користувача" required>
+                <input type="password" id="login-password" placeholder="Пароль" required>
+                <button type="submit" class="btn-auth-submit">Увійти</button>
+            </form>
+            <p class="auth-switch-text">Немає акаунту? <span id="switch-to-register">Зареєструватися</span></p>
+        </div>
+
+        <!-- ФОРМА РЕЄСТРАЦІЇ (REGISTER) -->
+        <div id="register-form-container" class="hidden">
+            <h2>Реєстрація</h2>
+            <form id="register-form">
+                <input type="text" id="register-username" placeholder="Придумайте ім'я" required>
+                <input type="password" id="register-password" placeholder="Придумайте пароль" required>
+                <button type="submit" class="btn-auth-submit">Створити акаунт</button>
+            </form>
+            <p class="auth-switch-text">Вже є акаунт? <span id="switch-to-login">Увійти</span></p>
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
